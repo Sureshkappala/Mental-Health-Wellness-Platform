@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="relBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EBF4F0"/>
+      <stop offset="50%" stop-color="#F6EFE9"/>
+      <stop offset="100%" stop-color="#EAE3F1"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6DA48B"/>
+      <stop offset="100%" stop-color="#4B7763"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="24" fill="url(#relBg)"/>
+
+  <!-- Expanding Calming Concentric Waves -->
+  <g transform="translate(400, 300)">
+    <circle cx="0" cy="0" r="230" fill="none" stroke="#A7C7B7" stroke-width="2" opacity="0.25" stroke-dasharray="6,6"/>
+    <circle cx="0" cy="0" r="180" fill="none" stroke="#A7C7B7" stroke-width="2.5" opacity="0.4"/>
+    <circle cx="0" cy="0" r="130" fill="none" stroke="#7C9D8E" stroke-width="3" opacity="0.6"/>
+    <circle cx="0" cy="0" r="80" fill="#D2E8DC" opacity="0.6"/>
+
+    <!-- Central Blooming Flower of Serenity -->
+    <g transform="scale(1.2)">
+      <!-- Petals -->
+      <path d="M0,0 C-20,-40 -10,-70 0,-80 C10,-70 20,-40 0,0 Z" fill="#E89A7A" opacity="0.9"/>
+      <path d="M0,0 C-40,-20 -70,-10 -80,0 C-70,10 -40,20 0,0 Z" fill="#E89A7A" opacity="0.9"/>
+      <path d="M0,0 C-20,40 -10,70 0,80 C10,70 20,40 0,0 Z" fill="#E89A7A" opacity="0.9"/>
+      <path d="M0,0 C40,-20 70,-10 80,0 C70,10 40,20 0,0 Z" fill="#E89A7A" opacity="0.9"/>
+
+      <path d="M0,0 C-35,-35 -50,-50 -56,-56 C-50,-50 -35,-35 0,0 Z" stroke="#B8A9C9" stroke-width="12" stroke-linecap="round"/>
+      <path d="M0,0 C35,-35 50,-50 56,-56 C50,-50 35,-35 0,0 Z" stroke="#B8A9C9" stroke-width="12" stroke-linecap="round"/>
+      <path d="M0,0 C-35,35 -50,50 -56,56 C-50,50 -35,35 0,0 Z" stroke="#B8A9C9" stroke-width="12" stroke-linecap="round"/>
+      <path d="M0,0 C35,35 50,50 56,56 C50,50 35,35 0,0 Z" stroke="#B8A9C9" stroke-width="12" stroke-linecap="round"/>
+
+      <!-- Center Gold Core -->
+      <circle cx="0" cy="0" r="22" fill="#F4A261"/>
+      <circle cx="0" cy="0" r="14" fill="#FAF8F5"/>
+    </g>
+  </g>
+
+  <!-- Supportive Uplifting Affirmations Text Elements -->
+  <g font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" opacity="0.75">
+    <text x="140" y="150" font-size="16" fill="#4B7763">INHALE PEACE</text>
+    <text x="560" y="470" font-size="16" fill="#8C79A3">RELEASE TENSION</text>
+  </g>
+</svg>

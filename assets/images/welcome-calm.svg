@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F4F8F6"/>
+      <stop offset="50%" stop-color="#F8F5FC"/>
+      <stop offset="100%" stop-color="#FDF6F0"/>
+    </linearGradient>
+    <linearGradient id="warmSofa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E4DCD0"/>
+      <stop offset="100%" stop-color="#CEBFAC"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="24" fill="url(#wBg)"/>
+  <!-- Calming Window with sunlight and tree branch -->
+  <rect x="120" y="70" width="220" height="260" rx="110" fill="#E8F1EC" stroke="#C2D6CC" stroke-width="6"/>
+  <path d="M120,200 L340,200 M230,70 L230,330" stroke="#C2D6CC" stroke-width="4"/>
+  <circle cx="270" cy="140" r="35" fill="#FCE7D6" opacity="0.8"/>
+  <!-- Gentle green leaves curling through window -->
+  <path d="M120,130 Q160,150 200,120 Q160,110 120,130 Z" fill="#7C9D8E"/>
+  <path d="M160,180 Q210,190 230,160 Q180,160 160,180 Z" fill="#6B8F7F"/>
+
+  <!-- Comfortable Armchair / Conversation setting -->
+  <g transform="translate(420, 260)">
+    <rect x="20" y="80" width="160" height="90" rx="24" fill="url(#warmSofa)"/>
+    <path d="M5,100 Q15,70 30,70 L30,170 L5,170 Z" fill="#BFB09D"/>
+    <path d="M195,100 Q185,70 170,70 L170,170 L195,170 Z" fill="#BFB09D"/>
+    <!-- Pillow (Lavender) -->
+    <rect x="40" y="85" width="50" height="50" rx="14" fill="#B8A9C9" opacity="0.9" transform="rotate(-10 65 110)"/>
+    <!-- Chair legs -->
+    <line x1="30" y1="170" x2="20" y2="210" stroke="#7A6855" stroke-width="6" stroke-linecap="round"/>
+    <line x1="170" y1="170" x2="180" y2="210" stroke="#7A6855" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Potted Botanical Plant on Floor -->
+  <g transform="translate(140, 360)">
+    <!-- Terracotta pot -->
+    <path d="M30,140 L70,140 L60,200 L40,200 Z" fill="#E89A7A"/>
+    <!-- Plant stalks & large monstera / fiddle leaf -->
+    <path d="M50,140 Q40,60 10,20 Q40,40 50,140 Z" fill="#4F7362"/>
+    <path d="M50,140 Q70,70 100,30 Q70,50 50,140 Z" fill="#658D7B"/>
+    <path d="M50,140 Q50,40 45,0 Q60,30 50,140 Z" fill="#7C9D8E"/>
+  </g>
+
+  <!-- Little Warm Tea Table with steaming mug -->
+  <g transform="translate(340, 390)">
+    <ellipse cx="40" cy="40" rx="45" ry="12" fill="#D8CFBF"/>
+    <line x1="40" y1="52" x2="40" y2="120" stroke="#8C7965" stroke-width="5"/>
+    <line x1="15" y1="120" x2="65" y2="120" stroke="#8C7965" stroke-width="5" stroke-linecap="round"/>
+    <!-- Cup -->
+    <rect x="30" y="24" width="20" height="18" rx="4" fill="#FAF8F5" stroke="#7C9D8E" stroke-width="2"/>
+    <!-- Steam -->
+    <path d="M35,20 Q33,12 37,6" fill="none" stroke="#B8A9C9" stroke-width="2" stroke-linecap="round"/>
+    <path d="M43,20 Q41,10 45,4" fill="none" stroke="#B8A9C9" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

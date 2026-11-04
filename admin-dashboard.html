@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — MindBloom Platform Coordinator</title>
+  <meta name="description" content="MindBloom demonstration administrative dashboard for managing educational resources, demo appointments, and content categories.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Dedicated Dashboard Header -->
+  <header class="dashboard-header">
+    <div class="dashboard-header-inner">
+      <div class="dashboard-header-left">
+        <button type="button" class="dashboard-hamburger-btn" id="dashboardSidebarToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="admin-dashboard.html" class="brand-logo" aria-label="MindBloom Home">
+          <img src="assets/images/logo.png" alt="Stackly MindBloom Logo" height="34">
+        </a>
+        <span class="dashboard-portal-tag admin">Platform Coordinator</span>
+      </div>
+
+      <div class="dashboard-header-right">
+        <a href="index.html" class="dashboard-header-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span>Main Website</span>
+        </a>
+        <div class="dashboard-user-badge">
+          <span class="user-avatar-indicator" style="background: #E87A5D;"></span>
+          <span>Admin Demo</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <a href="admin-dashboard.html" class="brand-logo" aria-label="MindBloom Home">
+        <img src="assets/images/logo.png" alt="Stackly MindBloom Logo" height="36">
+      </a>
+      <button class="btn btn-ghost btn-icon" id="closeDrawerBtn">&times;</button>
+    </div>
+
+    <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-light); letter-spacing: 0.05em; margin-bottom: 0.65rem;">
+      Admin Console Modules
+    </div>
+    <ul class="drawer-nav" style="margin-bottom: 1.5rem;">
+      <li><a href="admin-dashboard.html" class="nav-link active">📊 Overview Stats</a></li>
+      <li><a href="admin-resources.html" class="nav-link">📚 Manage Resources</a></li>
+      <li><a href="admin-appointments.html" class="nav-link">🗓️ Demo Appointments</a></li>
+      <li><a href="admin-professionals.html" class="nav-link">👩‍⚕️ Professionals Directory</a></li>
+      <li><a href="admin-moderation.html" class="nav-link">🛡️ Safety &amp; Content Audit</a></li>
+      <li><a href="admin-analytics.html" class="nav-link">📈 Reading Analytics</a></li>
+      <li><a href="admin-safety.html" class="nav-link">🔒 Privacy Boundaries</a></li>
+    </ul>
+
+    <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-light); letter-spacing: 0.05em; margin-bottom: 0.65rem;">
+      Platform
+    </div>
+    <ul class="drawer-nav">
+      <li><a href="user-dashboard.html" class="nav-link">👤 Switch to User Portal</a></li>
+      <li><a href="resources.html" class="nav-link">📚 Public Library</a></li>
+      <li><a href="professionals.html" class="nav-link">👩‍⚕️ Public Directory</a></li>
+      <li><a href="index.html" class="nav-link">🏠 Main Website</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <button type="button" class="btn btn-outline btn-sm logout-trigger" style="width: 100%;">Logout</button>
+    </div>
+  </aside>
+
+  <!-- Dashboard Layout -->
+  <div class="dashboard-layout">
+    <!-- Admin Sidebar -->
+    <aside class="dashboard-sidebar" aria-label="Admin Sidebar">
+      <div style="margin-bottom: 2rem;">
+        <div style="font-size: 0.85rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; margin-bottom: 0.75rem;">
+          Console Modules
+        </div>
+        <ul class="dashboard-nav-list">
+          <li class="dashboard-nav-item"><a href="admin-dashboard.html" class="active">📊 Overview Stats</a></li>
+          <li class="dashboard-nav-item"><a href="admin-resources.html">📚 Manage Resources</a></li>
+          <li class="dashboard-nav-item"><a href="admin-appointments.html">🗓️ Demo Appointments</a></li>
+          <li class="dashboard-nav-item"><a href="admin-professionals.html">👩‍⚕️ Professionals</a></li>
+          <li class="dashboard-nav-item"><a href="admin-moderation.html">🛡️ Safety &amp; Audit Logs</a></li>
+          <li class="dashboard-nav-item"><a href="admin-analytics.html">📈 Analytics</a></li>
+          <li class="dashboard-nav-item"><a href="admin-safety.html">🔒 Privacy &amp; Boundaries</a></li>
+        </ul>
+      </div>
+
+      <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <div style="font-size: 0.825rem; color: var(--text-light); margin-bottom: 0.5rem;">Role: Coordinator</div>
+        <a href="user-dashboard.html" class="btn btn-outline btn-sm" style="width: 100%; margin-bottom: 0.5rem;">View User Portal</a>
+        <button type="button" class="btn btn-ghost btn-sm logout-trigger" style="padding-left: 0; color: #D34C4C;">Logout</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h1 style="font-size: 1.85rem; margin-bottom: 0.25rem;">Administrative Console</h1>
+          <p style="color: var(--text-muted); margin-bottom: 0;">Manage educational resources, review demo bookings, and maintain platform standards.</p>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" id="openAddResourceModalBtn">+ Add New Resource</button>
+      </div>
+
+      <!-- Stats Overview -->
+      <section id="overviewSection" class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-val" id="adminTotalResources">8</div>
+          <div class="stat-label">Published Guides</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="adminTotalProfs">4</div>
+          <div class="stat-label">Sample Professionals</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="adminTotalApts">1</div>
+          <div class="stat-label">Demo Bookings Active</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">100%</div>
+          <div class="stat-label">Privacy Shield Integrity</div>
+        </div>
+      </section>
+
+      <!-- Overview Modules Grid -->
+      <div class="category-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+        <!-- Module 1: Educational Resources -->
+        <div class="card" style="padding: 1.75rem; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div style="font-size: 1.75rem;">📚</div>
+            <span class="badge badge-sage">8 Published</span>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Manage Resources</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+            Curate evidence-informed wellness guides, update self-help materials, and publish new articles.
+          </p>
+          <a href="admin-resources.html" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">Open Manage Resources →</a>
+        </div>
+
+        <!-- Module 2: Demo Appointments -->
+        <div class="card" style="padding: 1.75rem; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div style="font-size: 1.75rem;">🗓️</div>
+            <span class="badge badge-demo">1 Active</span>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Demo Appointments</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+            Review simulated consultation queues, attendee details, and test appointment status updates.
+          </p>
+          <a href="admin-appointments.html" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">Open Demo Appointments →</a>
+        </div>
+
+        <!-- Module 3: Professionals Directory -->
+        <div class="card" style="padding: 1.75rem; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div style="font-size: 1.75rem;">👩‍⚕️</div>
+            <span class="badge badge-sage">6 Specialists</span>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Professionals Directory</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+            Monitor verified specialist credentials, online/in-person availability, and public profile links.
+          </p>
+          <a href="admin-professionals.html" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">Open Professionals →</a>
+        </div>
+
+        <!-- Module 4: Safety & Content Audit -->
+        <div class="card" style="padding: 1.75rem; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div style="font-size: 1.75rem;">🛡️</div>
+            <span class="badge badge-sage">Passing (100%)</span>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Safety &amp; Audit Logs</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+            Automated screening for non-diagnostic language, crisis hotline presence, and data isolation.
+          </p>
+          <a href="admin-moderation.html" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">Open Audit Logs →</a>
+        </div>
+
+        <!-- Module 5: Reading Analytics -->
+        <div class="card" style="padding: 1.75rem; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div style="font-size: 1.75rem;">📈</div>
+            <span class="badge badge-teal">Top: Stress 38%</span>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Reading Analytics</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+            Explore aggregated anonymous reading interest across topics like sleep, somatic resets, and mindfulness.
+          </p>
+          <a href="admin-analytics.html" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">Open Analytics →</a>
+        </div>
+
+        <!-- Module 6: Privacy Boundaries -->
+        <div class="card" style="padding: 1.75rem; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div style="font-size: 1.75rem;">🔒</div>
+            <span class="badge badge-sage">Client-Side Only</span>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Privacy &amp; Boundaries</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+            Review client data isolation guarantees, ethical non-clinical architecture, and zero-server logging.
+          </p>
+          <a href="admin-safety.html" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">Open Privacy Docs →</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Add Resource Modal -->
+  <div class="modal-backdrop" id="adminAddResourceModal" role="dialog" aria-modal="true" aria-labelledby="addResHeading">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="addResHeading">Add New Educational Resource</h3>
+        <button type="button" class="btn btn-ghost modal-close-btn" id="closeAddResourceModalBtn">&times;</button>
+      </div>
+
+      <form id="adminAddResourceForm">
+        <div class="form-group">
+          <label for="adminResTitleInput" class="form-label">Resource Title <span class="req">*</span></label>
+          <input type="text" id="adminResTitleInput" class="form-control" placeholder="e.g. Somatic Grounding in the Morning" required />
+        </div>
+
+        <div class="form-group">
+          <label for="adminResCategorySelect" class="form-label">Category <span class="req">*</span></label>
+          <select id="adminResCategorySelect" class="form-control" required>
+            <option value="Stress Management">Stress Management</option>
+            <option value="Mindfulness">Mindfulness</option>
+            <option value="Healthy Sleep Habits">Healthy Sleep Habits</option>
+            <option value="Work-Life Balance">Work-Life Balance</option>
+            <option value="Self-Care Routines">Self-Care Routines</option>
+            <option value="Emotional Awareness">Emotional Awareness</option>
+            <option value="Personal Growth">Personal Growth</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="adminResTimeInput" class="form-label">Reading Time</label>
+          <input type="text" id="adminResTimeInput" class="form-control" placeholder="e.g. 4 min read" value="4 min read" />
+        </div>
+
+        <div class="form-group">
+          <label for="adminResDescInput" class="form-label">Brief Description &amp; Content <span class="req">*</span></label>
+          <textarea id="adminResDescInput" class="form-control" rows="4" placeholder="Educational summary and actionable advice..." required></textarea>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 1rem;">
+          <button type="button" class="btn btn-outline" onclick="document.getElementById('adminAddResourceModal').classList.remove('is-active')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Publish Guide</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

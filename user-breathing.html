@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breathing Space — MindBloom Sanctuary</title>
+  <meta name="description" content="Visual guided breathing exercises to regulate the autonomic nervous system and soothe stress.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Dedicated Dashboard Header -->
+  <header class="dashboard-header">
+    <div class="dashboard-header-inner">
+      <div class="dashboard-header-left">
+        <button type="button" class="dashboard-hamburger-btn" id="dashboardSidebarToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="user-dashboard.html" class="brand-logo" aria-label="MindBloom Home">
+          <img src="assets/images/logo.png" alt="Stackly MindBloom Logo" height="34">
+        </a>
+        <span class="dashboard-portal-tag">User Sanctuary</span>
+      </div>
+
+      <div class="dashboard-header-right">
+        <a href="index.html" class="dashboard-header-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span>Main Website</span>
+        </a>
+        <div class="dashboard-user-badge">
+          <span class="user-avatar-indicator"></span>
+          <span>Alex Rivera</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <a href="user-dashboard.html" class="brand-logo" aria-label="MindBloom Home">
+        <img src="assets/images/logo.png" alt="Stackly MindBloom Logo" height="36">
+      </a>
+      <button class="btn btn-ghost btn-icon" id="closeDrawerBtn">&times;</button>
+    </div>
+
+    <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-light); letter-spacing: 0.05em; margin-bottom: 0.65rem;">
+      Sanctuary Modules
+    </div>
+    <ul class="drawer-nav" style="margin-bottom: 1.5rem;">
+      <li><a href="user-dashboard.html" class="nav-link">📊 Overview</a></li>
+      <li><a href="user-appointments.html" class="nav-link">🗓️ Appointments</a></li>
+      <li><a href="user-saved-resources.html" class="nav-link">📚 Saved Resources</a></li>
+      <li><a href="user-mood-tracker.html" class="nav-link">😊 Mood Tracker</a></li>
+      <li><a href="user-journal.html" class="nav-link">📖 Private Journal</a></li>
+      <li><a href="user-wellness-goals.html" class="nav-link">🎯 Wellness Goals</a></li>
+      <li><a href="user-breathing.html" class="nav-link active">🌬️ Breathing Space</a></li>
+      <li><a href="user-booking.html" class="nav-link">🗓️ Book Appointment</a></li>
+    </ul>
+
+    <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-light); letter-spacing: 0.05em; margin-bottom: 0.65rem;">
+      Platform
+    </div>
+    <ul class="drawer-nav">
+      <li><a href="index.html" class="nav-link">🏠 Main Website</a></li>
+      <li><a href="professionals.html" class="nav-link">👩‍⚕️ Professionals Directory</a></li>
+      <li><a href="admin-dashboard.html" class="nav-link">🛡️ Switch to Admin Demo</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <button type="button" class="btn btn-outline btn-sm logout-trigger" style="width: 100%;">Logout</button>
+    </div>
+  </aside>
+
+  <!-- Dashboard Layout -->
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar" aria-label="Dashboard Sidebar">
+      <div style="margin-bottom: 2rem;">
+        <div style="font-size: 0.85rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; margin-bottom: 0.75rem;">
+          Sanctuary Modules
+        </div>
+        <ul class="dashboard-nav-list">
+          <li class="dashboard-nav-item"><a href="user-dashboard.html">📊 Overview</a></li>
+          <li class="dashboard-nav-item"><a href="user-appointments.html">🗓️ Appointments</a></li>
+          <li class="dashboard-nav-item"><a href="user-saved-resources.html">📚 Saved Resources</a></li>
+          <li class="dashboard-nav-item"><a href="user-mood-tracker.html">😊 Mood Tracker</a></li>
+          <li class="dashboard-nav-item"><a href="user-journal.html">📖 Private Journal</a></li>
+          <li class="dashboard-nav-item"><a href="user-wellness-goals.html">🎯 Wellness Goals</a></li>
+          <li class="dashboard-nav-item"><a href="user-breathing.html" class="active">🌬️ Breathing Space</a></li>
+          <li class="dashboard-nav-item"><a href="user-booking.html">🗓️ Book Appointment</a></li>
+        </ul>
+      </div>
+
+      <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <div style="font-size: 0.825rem; color: var(--text-light); margin-bottom: 0.5rem;">Role: Demo Seeker</div>
+        <button type="button" class="btn btn-ghost btn-sm logout-trigger" style="padding-left: 0; color: #D34C4C;">Logout</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h1 style="font-size: 1.85rem; margin-bottom: 0.25rem;">Breathing Space &amp; Nervous Reset</h1>
+          <p style="color: var(--text-muted); margin-bottom: 0;">Follow the gentle visual rhythm to activate the parasympathetic rest-and-digest response.</p>
+        </div>
+        <span class="badge badge-sage" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">🕊️ Vagus Nerve Calming</span>
+      </div>
+
+      <!-- Breathing Exercise Card -->
+      <div class="card mb-4" style="padding: 2.5rem; text-align: center; margin-bottom: 2.5rem;">
+        <!-- Technique Tabs -->
+        <div class="technique-tabs-row" style="display: flex; justify-content: center; gap: 0.75rem; margin-bottom: 2rem; flex-wrap: wrap;">
+          <button type="button" class="btn btn-sm btn-outline technique-btn is-active" data-technique="box">Box Breathing (4-4-4-4)</button>
+          <button type="button" class="btn btn-sm btn-ghost technique-btn" data-technique="relax">4-7-8 Sleep &amp; Relax</button>
+          <button type="button" class="btn btn-sm btn-ghost technique-btn" data-technique="coherent">Coherent (5.5s Pace)</button>
+        </div>
+
+        <!-- Animated Circle Container -->
+        <div class="breathing-visual-container" style="margin: 0 auto 2rem; width: 260px; height: 260px; position: relative; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle, var(--sage-100) 0%, rgba(255,255,255,0) 70%); border-radius: 50%;">
+          <div class="breathing-circle-animated" id="breathingAnimatedCircle" style="width: 130px; height: 130px; border-radius: 50%; background: linear-gradient(135deg, var(--sage-300), var(--peach-300)); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--sage-900); font-weight: 700; box-shadow: 0 10px 30px rgba(107, 143, 127, 0.25); transition: transform 4s ease-in-out;">
+            <div id="breathPhaseLabel" style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em;">Inhale</div>
+            <div id="breathTimerNumber" style="font-size: 1.85rem; line-height: 1.2;">4</div>
+          </div>
+        </div>
+
+        <div style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+          Cycle Count: <strong id="breathCycleCount" style="color: var(--text-main);">0</strong> &bull; Take each breath without straining
+        </div>
+
+        <!-- Breathing Control Buttons -->
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <button type="button" class="btn btn-primary btn-lg" id="startBreathBtn">Start Guided Breath</button>
+          <button type="button" class="btn btn-outline btn-lg" id="pauseBreathBtn">Pause</button>
+          <button type="button" class="btn btn-ghost btn-lg" id="resetBreathBtn">Reset</button>
+        </div>
+      </div>
+
+      <!-- Somatic Education Box -->
+      <div class="card" style="padding: 1.75rem; background: var(--ivory-50); border: 1.5px dashed var(--sage-300);">
+        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-main);">🌿 How Diaphragmatic Breathing Works</h4>
+        <p style="font-size: 0.925rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 0;">
+          When exhales are intentionally longer than inhales, your heart rate slows and your vagus nerve sends safety signals directly to your brainstem. If at any moment you feel dizzy or breathless, return immediately to your normal natural breathing pattern.
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C9D8E"/>
+      <stop offset="100%" stop-color="#4B7763"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="#EAF2EE"/>
+  <!-- Blooming Leaf & Heart -->
+  <path d="M24,10 C18,18 10,24 10,32 C10,38 16,42 24,42 C32,42 38,38 38,32 C38,24 30,18 24,10 Z" fill="url(#logoGrad)"/>
+  <path d="M24,20 C21,24 16,28 16,33 C16,37 19,39 24,39 C29,39 32,37 32,33 C32,28 27,24 24,20 Z" fill="#FAF8F5" opacity="0.95"/>
+  <circle cx="24" cy="30" r="3.5" fill="#E89A7A"/>
+</svg>

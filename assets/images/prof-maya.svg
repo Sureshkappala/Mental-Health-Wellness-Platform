@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgMaya" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDF2E9"/>
+      <stop offset="100%" stop-color="#F5DBCB"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="32" fill="url(#bgMaya)"/>
+  <circle cx="200" cy="150" r="68" fill="#C68B59"/>
+  <!-- Flowing dark hair -->
+  <path d="M125,145 C120,65 280,65 275,145 C275,230 260,250 250,260 C240,210 250,110 200,105 C150,110 160,210 150,260 C140,250 125,230 125,145 Z" fill="#211815"/>
+  <!-- Calming eyes -->
+  <path d="M165,152 Q175,147 185,152" fill="none" stroke="#251821" stroke-width="3" stroke-linecap="round"/>
+  <path d="M215,152 Q225,147 235,152" fill="none" stroke="#251821" stroke-width="3" stroke-linecap="round"/>
+  <!-- Gentle smile -->
+  <path d="M186,183 Q200,195 214,183" fill="none" stroke="#7A3926" stroke-width="3" stroke-linecap="round"/>
+  <!-- Gentle Terracotta Blouse -->
+  <path d="M100,380 C100,280 140,240 200,240 C260,240 300,280 300,380 Z" fill="#D97757"/>
+  <path d="M180,240 L200,295 L220,240 Z" fill="#FFFDF8"/>
+</svg>

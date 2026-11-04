@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nightBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1B2B28"/>
+      <stop offset="50%" stop-color="#2D463F"/>
+      <stop offset="100%" stop-color="#4E655C"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF9E6" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#FCE7B8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FCE7B8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" rx="24" fill="url(#nightBg)"/>
+
+  <!-- Soft Glowing Crescent Moon -->
+  <circle cx="560" cy="180" r="100" fill="url(#moonGlow)"/>
+  <path d="M570,120 A60,60 0 0,0 570,240 A50,50 0 0,1 570,120 Z" fill="#FFF4D4"/>
+
+  <!-- Calm Twilight Clouds -->
+  <path d="M60,340 Q160,300 280,340 T520,330 T740,360 L740,600 L60,600 Z" fill="#253833" opacity="0.7"/>
+  <path d="M0,420 Q180,380 400,430 T800,410 L800,600 L0,600 Z" fill="#1C2C27"/>
+
+  <!-- Constellation / Gentle Twinkling Stars -->
+  <g fill="#FAF8F5" opacity="0.8">
+    <circle cx="150" cy="120" r="2.5"/><circle cx="210" cy="90" r="1.5"/><circle cx="280" cy="140" r="2"/>
+    <circle cx="360" cy="80" r="3"/><circle cx="440" cy="130" r="1.8"/><circle cx="680" cy="100" r="2.5"/>
+    <circle cx="730" cy="170" r="2"/><circle cx="110" cy="220" r="1.5"/><circle cx="320" cy="230" r="2"/>
+  </g>
+  <polyline points="150,120 210,90 280,140 360,80" fill="none" stroke="#FAF8F5" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Restful Sleeping Cat / Gentle Comfort Accent -->
+  <g transform="translate(360, 430)">
+    <path d="M-60,50 C-60,0 40,0 50,50 Z" fill="#E8DED1"/>
+    <!-- Tail -->
+    <path d="M50,45 C80,45 85,25 75,15" fill="none" stroke="#E8DED1" stroke-width="12" stroke-linecap="round"/>
+    <!-- Ears -->
+    <polygon points="-45,15 -55,-5 -35,5" fill="#CBBBA6"/>
+    <polygon points="-25,8 -15,-10 -5,8" fill="#CBBBA6"/>
+    <!-- Gentle Zzz -->
+    <text x="65" y="-10" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" fill="#E89A7A" opacity="0.85">z</text>
+    <text x="85" y="-30" font-family="'Plus Jakarta Sans', sans-serif" font-size="26" fill="#E89A7A" opacity="0.95">z</text>
+    <text x="110" y="-55" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" fill="#E89A7A">Z</text>
+  </g>
+</svg>

@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindBloom — Small Steps Toward a Healthier Mind</title>
+  <meta name="description" content="A supportive, judgment-free mental health and wellness platform. Explore calming mindfulness exercises, track your moods, journal privately, and discover educational wellness guides.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Safety & Non-Emergency Disclaimer Banner -->
+  <aside class="crisis-support-bar" aria-label="Emergency Crisis Support Notice">
+    <strong>Need immediate support?</strong> MindBloom provides wellness education, not emergency medical care. In crisis, call or text <a href="tel:988">988</a> (USA &amp; Canada) or contact your local emergency service.
+  </aside>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar-header" id="navbarHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="MindBloom Home">
+        <img src="assets/images/logo.png" alt="Stackly MindBloom Logo" height="36">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="resources.html" class="nav-link">Wellness Resources</a>
+        <a href="mindfulness.html" class="nav-link">Mindfulness</a>
+        <a href="mood-tracker.html" class="nav-link">Mood Tracker</a>
+        <a href="professionals.html" class="nav-link">Professionals</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
+        <a href="booking.html" class="btn btn-primary btn-sm">Get Started</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="MindBloom Home">
+        <img src="assets/images/logo.png" alt="Stackly MindBloom Logo" height="36">
+      </a>
+      <button class="btn btn-ghost btn-icon" id="closeDrawerBtn" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="drawer-nav">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="resources.html" class="nav-link">Wellness Resources</a></li>
+      <li><a href="mindfulness.html" class="nav-link">Mindfulness</a></li>
+      <li><a href="breathing-exercises.html" class="nav-link">Breathing Exercises</a></li>
+      <li><a href="mood-tracker.html" class="nav-link">Mood Tracker</a></li>
+      <li><a href="journal.html" class="nav-link">Private Journal</a></li>
+      <li><a href="wellness-goals.html" class="nav-link">Wellness Goals</a></li>
+      <li><a href="professionals.html" class="nav-link">Professionals Directory</a></li>
+      <li><a href="booking.html" class="nav-link">Book Appointment</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+        <div class="drawer-footer">
+      <div style="display: flex; gap: 0.5rem;">
+        <a href="login.html" class="btn btn-outline btn-sm" style="flex: 1; text-align: center;">Login</a>
+        <a href="register.html" class="btn btn-primary btn-sm" style="flex: 1; text-align: center;">Register</a>
+      </div>
+      <div class="drawer-contact-card">
+        <div class="drawer-contact-title">
+          <span>🌿</span> Contact &amp; Coordinates
+        </div>
+        <a href="tel:5551234567" class="drawer-contact-line">
+          <span>📞</span> +1 (555) 123-4567
+        </a>
+        <a href="mailto:hello@mindbloom.example.org" class="drawer-contact-line">
+          <span>✉️</span> hello@mindbloom.example.org
+        </a>
+        <div class="drawer-contact-line">
+          <span>📍</span> 450 Wellness Way, SF, CA
+        </div>
+        <div class="drawer-crisis-notice">
+          <strong>24/7 Crisis Hotline:</strong> Call/Text <a href="tel:988">988</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="hero-section section" aria-labelledby="heroHeading">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span>🌿 Compassionate, Self-Paced Wellness</span>
+            </div>
+            <h1 id="heroHeading" class="hero-title">
+              Small Steps Toward a <span class="text-gradient">Healthier Mind</span>
+            </h1>
+            <p class="hero-description">
+              Welcome to a gentle, judgment-free space designed for your emotional balance. Discover guided breathing, private mood reflection, daily self-care rituals, and educational resources tailored to everyday peace.
+            </p>
+            <div class="hero-cta-group">
+              <a href="resources.html" class="btn btn-primary btn-lg">Explore Wellness</a>
+              <a href="breathing-exercises.html" class="btn btn-outline btn-lg">Start 2-Min Breath</a>
+            </div>
+            <div class="hero-trust">
+              <div class="trust-item">
+                <span>🛡️</span>
+                <span>Private &amp; Local</span>
+              </div>
+              <div class="trust-item">
+                <span>🌱</span>
+                <span>Evidence-Informed</span>
+              </div>
+              <div class="trust-item">
+                <span>🕊️</span>
+                <span>100% Judgment-Free</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image-wrap">
+            <!-- Hero loaded eagerly -->
+            <img src="assets/images/hero.svg" alt="Peaceful nature mountain landscape with a calm meditation silhouette and soft sunlight" loading="eager" width="600" height="400">
+            <div class="floating-pill pill-top">
+              <span>🌸</span>
+              <div>
+                <small style="color: var(--text-muted); display: block; font-size: 0.75rem;">Daily Intention</small>
+                <span>Breathe with kindness</span>
+              </div>
+            </div>
+            <div class="floating-pill pill-bottom">
+              <span>✨</span>
+              <div>
+                <small style="color: var(--text-muted); display: block; font-size: 0.75rem;">Gentle Streak</small>
+                <span>4 Days of Calm Reflection</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Welcome to MindBloom -->
+    <section class="section section-alt" aria-labelledby="welcomeHeading">
+      <div class="container">
+        <div class="hero-grid welcome-grid">
+          <div class="welcome-image-wrap">
+            <img src="assets/images/welcome-calm.svg" alt="Cozy serene room with sunlight, warm sofa, and gentle botanical plant" loading="lazy" width="600" height="450">
+          </div>
+          <div>
+            <div class="section-subtitle">Welcome to MindBloom</div>
+            <h2 id="welcomeHeading" class="section-title">A Peaceful Haven for Personal Reflection</h2>
+            <p>
+              Life carries rhythms of busyness, uncertainty, and fatigue. At MindBloom, we believe mental health isn't about rigid perfection or forced cheerfulness—it’s about meeting yourself with tenderness, one quiet moment at a time.
+            </p>
+            <p>
+              Whether you are taking three slow breaths between meetings, gently noting how your body feels today, or reading educational guides on sleep hygiene, this platform is here to support you without pressure or clinical judgment.
+            </p>
+            <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+              <a href="about.html" class="btn btn-outline">Our Philosophy &amp; Mission</a>
+              <a href="journal.html" class="btn btn-ghost" style="text-decoration: underline;">Open Private Journal →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Explore Wellness Categories -->
+    <section class="section" aria-labelledby="categoriesHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">Holistic Areas of Care</div>
+          <h2 id="categoriesHeading" class="section-title">Explore Wellness Categories</h2>
+          <p class="section-desc">Practical, bite-sized themes curated to support emotional ease, restful sleep, and intentional daily routines.</p>
+        </div>
+
+        <div class="category-grid">
+          <div class="category-card cat-stress">
+            <div class="category-icon">
+              <img src="assets/icons/icon-stress.svg" alt="" width="26" height="26">
+            </div>
+            <h3>Stress Management</h3>
+            <p>Simple grounding techniques and nervous system resets when tasks feel intense or overwhelming.</p>
+            <a href="resources.html?cat=Stress+Management" class="btn btn-ghost btn-sm" style="margin-top: auto; padding-left: 0;">Explore Guides →</a>
+          </div>
+
+          <div class="category-card cat-mindfulness">
+            <div class="category-icon">
+              <img src="assets/icons/icon-mindfulness.svg" alt="" width="26" height="26">
+            </div>
+            <h3>Mindfulness</h3>
+            <p>Non-judgmental present moment awareness to step out of anxious mental loops and return home to your body.</p>
+            <a href="mindfulness.html" class="btn btn-ghost btn-sm" style="margin-top: auto; padding-left: 0;">Mindful Practices →</a>
+          </div>
+
+          <div class="category-card cat-sleep">
+            <div class="category-icon">
+              <img src="assets/icons/icon-sleep.svg" alt="" width="26" height="26">
+            </div>
+            <h3>Healthy Sleep Habits</h3>
+            <p>Evening wind-down rituals, gentle twilight habits, and science-backed sleep environment advice.</p>
+            <a href="resources.html?cat=Healthy+Sleep+Habits" class="btn btn-ghost btn-sm" style="margin-top: auto; padding-left: 0;">Restful Tips →</a>
+          </div>
+
+          <div class="category-card cat-journal">
+            <div class="category-icon">
+              <img src="assets/icons/icon-journal.svg" alt="" width="26" height="26">
+            </div>
+            <h3>Self-Care Routines</h3>
+            <p>Nourishing micro-moments that fit naturally into busy weekdays without guilt or high financial cost.</p>
+            <a href="wellness-goals.html" class="btn btn-ghost btn-sm" style="margin-top: auto; padding-left: 0;">Self-Care Rituals →</a>
+          </div>
+
+          <div class="category-card cat-emotional">
+            <div class="category-icon">
+              <img src="assets/icons/icon-heart.svg" alt="" width="26" height="26">
+            </div>
+            <h3>Emotional Awareness</h3>
+            <p>Expand your emotional vocabulary to name what you are feeling and respond with compassion.</p>
+            <a href="mood-tracker.html" class="btn btn-ghost btn-sm" style="margin-top: auto; padding-left: 0;">Check In Now →</a>
+          </div>
+
+          <div class="category-card cat-growth">
+            <div class="category-icon">
+              <img src="assets/icons/icon-growth.svg" alt="" width="26" height="26">
+            </div>
+            <h3>Personal Growth</h3>
+            <p>Building realistic, tiny habits and compassionate boundary-setting in work, relationships, and life.</p>
+            <a href="resources.html?cat=Personal+Growth" class="btn btn-ghost btn-sm" style="margin-top: auto; padding-left: 0;">Growth Guides →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Daily Mindfulness Feature -->
+    <section class="section section-sage" aria-labelledby="mindfulnessHeading">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="section-subtitle">Daily Calming Pause</div>
+            <h2 id="mindfulnessHeading" class="section-title">Give Yourself Permission to Pause</h2>
+            <p>
+              Mindfulness doesn't demand hours of silent meditation. A single conscious inhale, noticing the warmth of tea, or relaxing your jaw can alter your physiological state.
+            </p>
+            <div style="background: #FFFFFF; border-radius: var(--radius-lg); padding: 1.5rem; margin: 1.5rem 0; border: 1px solid var(--border-color);">
+              <h4 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <span>✨</span> Today's Mindfulness Prompt
+              </h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">
+                "Notice three colors in your room right now. Breathe in, appreciate their calmness, and exhale any hurry."
+              </p>
+            </div>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="breathing-exercises.html" class="btn btn-primary">Try Guided Breathing</a>
+              <a href="mindfulness.html" class="btn btn-outline">Explore Soundscapes</a>
+            </div>
+          </div>
+          <div style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md);">
+            <img src="assets/images/mindfulness-nature.svg" alt="Stacked zen balance stones over gentle water ripples with tranquil lotus flower" loading="lazy" width="600" height="450">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. How Are You Feeling Today? (Interactive Mood Check-in) -->
+    <section class="section" aria-labelledby="moodCheckinHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">Daily Check-In</div>
+          <h2 id="moodCheckinHeading" class="section-title">How Are You Feeling Today?</h2>
+          <p class="section-desc">There are no wrong answers. Acknowledging your present state is the first step toward self-compassion.</p>
+        </div>
+
+        <div class="mood-widget-card">
+          <div class="mood-options-row" role="radiogroup" aria-label="Select your mood">
+            <button type="button" class="mood-btn" data-mood="Very Good" data-score="5" role="radio" aria-checked="false">
+              <span class="mood-emoji">😊</span>
+              <span class="mood-label">Very Good</span>
+            </button>
+            <button type="button" class="mood-btn is-selected" data-mood="Good" data-score="4" role="radio" aria-checked="true">
+              <span class="mood-emoji">🙂</span>
+              <span class="mood-label">Good</span>
+            </button>
+            <button type="button" class="mood-btn" data-mood="Okay" data-score="3" role="radio" aria-checked="false">
+              <span class="mood-emoji">😐</span>
+              <span class="mood-label">Okay</span>
+            </button>
+            <button type="button" class="mood-btn" data-mood="Low" data-score="2" role="radio" aria-checked="false">
+              <span class="mood-emoji">😔</span>
+              <span class="mood-label">Low</span>
+            </button>
+            <button type="button" class="mood-btn" data-mood="Stressed" data-score="1" role="radio" aria-checked="false">
+              <span class="mood-emoji">😣</span>
+              <span class="mood-label">Stressed</span>
+            </button>
+          </div>
+
+          <label class="form-label">Optional Feeling Tags:</label>
+          <div class="feeling-tags-wrap">
+            <button type="button" class="tag-pill is-active" data-tag="Peaceful">Peaceful</button>
+            <button type="button" class="tag-pill is-active" data-tag="Grateful">Grateful</button>
+            <button type="button" class="tag-pill" data-tag="Tired">Tired</button>
+            <button type="button" class="tag-pill" data-tag="Anxious">Anxious</button>
+            <button type="button" class="tag-pill" data-tag="Energized">Energized</button>
+            <button type="button" class="tag-pill" data-tag="Overwhelmed">Overwhelmed</button>
+            <button type="button" class="tag-pill" data-tag="Hopeful">Hopeful</button>
+            <button type="button" class="tag-pill" data-tag="Content">Content</button>
+          </div>
+
+          <div class="form-group">
+            <label for="moodNoteInput" class="form-label">Optional Note or Reflection:</label>
+            <textarea id="moodNoteInput" class="form-control" rows="2" placeholder="Write a short reflection (e.g., had a restorative morning tea...)" style="resize: vertical;"></textarea>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <button type="button" id="saveMoodEntryBtn" class="btn btn-primary">Save Mood Check-In</button>
+            <a href="mood-tracker.html" class="btn btn-ghost btn-sm">View Trends &amp; History →</a>
+          </div>
+
+          <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 1.25rem; text-align: center;">
+            🔒 <em>Saved locally in your browser storage. MindBloom does not make medical diagnoses from mood scores.</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Featured Wellness Resources -->
+    <section class="section section-alt" aria-labelledby="resourcesHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">Knowledge &amp; Guides</div>
+          <h2 id="resourcesHeading" class="section-title">Educational Wellness Resources</h2>
+          <p class="section-desc">Evidence-informed articles and practical steps written in friendly, approachable language.</p>
+        </div>
+
+        <div class="resources-grid">
+          <!-- Card 1 -->
+          <article class="resource-card">
+            <div class="resource-thumb">
+              <img src="assets/images/stress-relief.svg" alt="Blooming flower of serenity with calming concentric waves" loading="lazy" width="400" height="240">
+            </div>
+            <div class="resource-body">
+              <div class="resource-meta">
+                <span class="badge badge-sage">Stress Management</span>
+                <span class="resource-time">⏱ 4 min read</span>
+              </div>
+              <h3 class="resource-title">5-4-3-2-1 Sensory Grounding for Everyday Stress</h3>
+              <p class="resource-desc">Learn how to gently reconnect with your immediate surroundings when feeling rushed or overstimulated.</p>
+              <div class="resource-footer">
+                <a href="resource-details.html?id=res-stress-grounding" class="btn btn-outline btn-sm">Read More</a>
+                <span style="font-size: 0.8rem; color: var(--text-light);">Free Guide</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="resource-card">
+            <div class="resource-thumb">
+              <img src="assets/images/sleep-relax.svg" alt="Peaceful twilight night sky with glowing crescent moon and constellation" loading="lazy" width="400" height="240">
+            </div>
+            <div class="resource-body">
+              <div class="resource-meta">
+                <span class="badge badge-teal">Healthy Sleep Habits</span>
+                <span class="resource-time">⏱ 5 min read</span>
+              </div>
+              <h3 class="resource-title">Cultivating a Restful Evening Wind-Down Routine</h3>
+              <p class="resource-desc">Simple transitions to signal your nervous system that the day is complete and it is safe to rest.</p>
+              <div class="resource-footer">
+                <a href="resource-details.html?id=res-sleep-hygiene" class="btn btn-outline btn-sm">Read More</a>
+                <span style="font-size: 0.8rem; color: var(--text-light);">Free Guide</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="resource-card">
+            <div class="resource-thumb">
+              <img src="assets/images/journal-cozy.svg" alt="Open journal notebook with fountain pen and sprig of dried lavender" loading="lazy" width="400" height="240">
+            </div>
+            <div class="resource-body">
+              <div class="resource-meta">
+                <span class="badge badge-peach">Self-Care Routines</span>
+                <span class="resource-time">⏱ 3 min read</span>
+              </div>
+              <h3 class="resource-title">Micro-Moments of Self-Care Under 5 Minutes</h3>
+              <p class="resource-desc">You do not need an entire day off to nourish yourself. Discover tiny pauses that restore emotional balance.</p>
+              <div class="resource-footer">
+                <a href="resource-details.html?id=res-self-care-rituals" class="btn btn-outline btn-sm">Read More</a>
+                <span style="font-size: 0.8rem; color: var(--text-light);">Free Guide</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="resources.html" class="btn btn-primary">Browse All Resources &amp; Guides</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Meet Our Professionals -->
+    <section class="section" aria-labelledby="professionalsHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">Supportive Care</div>
+          <h2 id="professionalsHeading" class="section-title">Meet Our Professionals</h2>
+          <p class="section-desc">
+            Profiles of qualified mental health professionals shown using <strong>clearly labeled sample data</strong> for educational demonstration.
+          </p>
+        </div>
+
+        <div class="prof-grid">
+          <!-- Prof 1 -->
+          <div class="prof-card">
+            <div class="prof-avatar">
+              <img src="assets/images/prof-elena.svg" alt="Dr. Elena Rostova, Clinical Psychologist demo portrait" loading="lazy" width="110" height="110">
+            </div>
+            <span class="badge badge-demo" style="align-self: center; margin-bottom: 0.5rem;">Sample Profile</span>
+            <h3 style="margin-bottom: 0.25rem;">Dr. Elena Rostova</h3>
+            <div class="prof-role">Clinical Psychologist, PsyD (Demo)</div>
+            <div class="prof-tags">
+              <span class="badge badge-sage">Anxiety &amp; Stress</span>
+              <span class="badge badge-lavender">Mindfulness</span>
+            </div>
+            <div class="prof-meta-list">
+              <div>📍 <strong>Format:</strong> Online Video &amp; In-Person</div>
+              <div>🗣️ <strong>Languages:</strong> English, Spanish</div>
+              <div>⭐ <strong>Experience:</strong> 12 years (Sample Data)</div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+              <a href="professional-details.html?id=prof-elena" class="btn btn-outline btn-sm" style="flex: 1;">View Profile</a>
+              <a href="booking.html?prof=Dr.+Elena+Rostova" class="btn btn-primary btn-sm" style="flex: 1;">Book Demo</a>
+            </div>
+          </div>
+
+          <!-- Prof 2 -->
+          <div class="prof-card">
+            <div class="prof-avatar">
+              <img src="assets/images/prof-marcus.svg" alt="Marcus Vance, Licensed Marriage & Family Therapist demo portrait" loading="lazy" width="110" height="110">
+            </div>
+            <span class="badge badge-demo" style="align-self: center; margin-bottom: 0.5rem;">Sample Profile</span>
+            <h3 style="margin-bottom: 0.25rem;">Marcus Vance</h3>
+            <div class="prof-role">Licensed Family Therapist, LMFT (Demo)</div>
+            <div class="prof-tags">
+              <span class="badge badge-peach">Work-Life Balance</span>
+              <span class="badge badge-teal">Relationships</span>
+            </div>
+            <div class="prof-meta-list">
+              <div>📍 <strong>Format:</strong> Online Video</div>
+              <div>🗣️ <strong>Languages:</strong> English</div>
+              <div>⭐ <strong>Experience:</strong> 9 years (Sample Data)</div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+              <a href="professional-details.html?id=prof-marcus" class="btn btn-outline btn-sm" style="flex: 1;">View Profile</a>
+              <a href="booking.html?prof=Marcus+Vance" class="btn btn-primary btn-sm" style="flex: 1;">Book Demo</a>
+            </div>
+          </div>
+
+          <!-- Prof 3 -->
+          <div class="prof-card">
+            <div class="prof-avatar">
+              <img src="assets/images/prof-sophia.svg" alt="Sophia Lin, Somatic Practitioner demo portrait" loading="lazy" width="110" height="110">
+            </div>
+            <span class="badge badge-demo" style="align-self: center; margin-bottom: 0.5rem;">Sample Profile</span>
+            <h3 style="margin-bottom: 0.25rem;">Sophia Lin</h3>
+            <div class="prof-role">Somatic &amp; Sleep Practitioner, MSW (Demo)</div>
+            <div class="prof-tags">
+              <span class="badge badge-lavender">Sleep Restructuring</span>
+              <span class="badge badge-sage">Somatic Ease</span>
+            </div>
+            <div class="prof-meta-list">
+              <div>📍 <strong>Format:</strong> Online Video &amp; In-Person</div>
+              <div>🗣️ <strong>Languages:</strong> English, Mandarin</div>
+              <div>⭐ <strong>Experience:</strong> 7 years (Sample Data)</div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+              <a href="professional-details.html?id=prof-sophia" class="btn btn-outline btn-sm" style="flex: 1;">View Profile</a>
+              <a href="booking.html?prof=Sophia+Lin" class="btn btn-primary btn-sm" style="flex: 1;">Book Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="professionals.html" class="btn btn-outline">Explore Full Professional Directory</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Your Wellness Journey -->
+    <section class="section section-sage" aria-labelledby="journeyHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">How MindBloom Works</div>
+          <h2 id="journeyHeading" class="section-title">Your Gentle Wellness Journey</h2>
+          <p class="section-desc">Four supportive, self-directed steps to establish daily equilibrium at your natural pace.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Check In</h3>
+            <p>Start your day with a quick, honest mood check-in. Name your feelings without judgment.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Practice</h3>
+            <p>Take 2 to 5 minutes for guided breathing, soothing soundscapes, or body relaxation.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Reflect</h3>
+            <p>Write private journal notes or set gentle daily wellness intentions that matter to you.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3>Bloom</h3>
+            <p>Track your weekly patterns, celebrate tiny streaks, and consult professionals when needed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Community and Testimonials -->
+    <section class="section" aria-labelledby="communityHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">Supportive Voices</div>
+          <h2 id="communityHeading" class="section-title">Reflections From Our Community</h2>
+          <p class="section-desc">Encouraging words from individuals who integrated MindBloom into their everyday routine. Demo feedback without exposing personal data.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "MindBloom never makes me feel like a clinical checklist. The 4-7-8 breathing timer has become my anchor between busy afternoon meetings."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar-initials">MR</div>
+              <div>
+                <strong>Maya R. (Sample User)</strong>
+                <div style="font-size: 0.8rem; color: var(--text-light);">Practicing for 3 months</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "Being able to privately write in the journal without algorithms selling my emotions is so refreshing. It truly feels like a quiet sanctuary."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar-initials">DL</div>
+              <div>
+                <strong>David L. (Sample User)</strong>
+                <div style="font-size: 0.8rem; color: var(--text-light);">Practicing for 5 months</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "The sleep hygiene guides gave me practical, tiny shifts. Lighting a candle and putting away my laptop 45 minutes early changed my mornings completely."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar-initials">SK</div>
+              <div>
+                <strong>Sara K. (Sample User)</strong>
+                <div style="font-size: 0.8rem; color: var(--text-light);">Practicing for 2 months</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10A. Mindful Living FAQ -->
+    <section class="section section-sage" id="mindfulFaqSection">
+      <div class="container container-narrow">
+        <div class="text-center" style="margin-bottom: 2.5rem;">
+          <div class="section-subtitle">Common Inquiries</div>
+          <h2 class="section-title">Mindful Living &amp; Platform FAQ</h2>
+          <p class="section-desc">
+            Answers to common questions about practicing mindfulness, privacy of your reflections, and getting started gently.
+          </p>
+        </div>
+
+        <div class="accordion-group">
+          <div class="accordion-item is-open">
+            <button type="button" class="accordion-trigger" aria-expanded="true">
+              <span>What if my mind wanders constantly during meditation or breathing?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              A wandering mind is completely normal and human. Mindfulness is not about clearing your mind of all thoughts; it is simply noticing when your attention has drifted and gently returning to your breath without frustration or self-judgment. Every time you notice you've wandered, that is a moment of awareness.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false">
+              <span>How does MindBloom protect my personal reflections and mood logs?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              Your journal entries, daily mood ratings, and personal wellness intentions are stored strictly in your browser's private local storage. They are never transmitted to external cloud trackers, sold to advertisers, or analyzed by third-party data brokers.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false">
+              <span>How much time do I need to invest daily to feel a difference?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              Even 2 to 3 minutes of intentional diaphragmatic breathing or a short 60-second sensory check-in can significantly lower sympathetic nervous system activation and decrease heart rate. Consistency matters far more than duration.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false">
+              <span>Is MindBloom a substitute for licensed psychiatric or psychological care?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              No. MindBloom is an educational self-care and mindfulness companion. It does not provide medical diagnoses, crisis intervention, or prescription medical treatments. If you are experiencing clinical depression, acute trauma, or suicidal thoughts, please connect with a licensed healthcare professional or 24/7 crisis service.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10B. Daily Gentle Intention Generator -->
+    <section class="section" id="dailyIntentionSection" style="background: #FFFFFF;">
+      <div class="container container-narrow">
+        <div class="interactive-widget-box text-center" style="border: 2px dashed var(--sage-300); background: var(--ivory-50);">
+          <div class="badge badge-sage" style="margin-bottom: 0.75rem;">Daily Contemplation</div>
+          <h3 style="font-size: 1.65rem; margin-bottom: 0.5rem;">Draw Today’s Mindful Reflection</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 520px; margin: 0 auto 1.5rem;">
+            Pause for a breath, tap the button below, and carry a gentle somatic intention into your hours.
+          </p>
+
+          <div style="background: #FFFFFF; border-radius: var(--radius-lg); padding: 1.75rem 1.5rem; border: 1px solid var(--border-color); margin-bottom: 1.5rem; min-height: 88px; display: flex; align-items: center; justify-content: center;">
+            <p id="affirmationTextDisplay" style="font-size: 1.15rem; font-style: italic; color: var(--sage-900); margin: 0; font-weight: 500; transition: opacity 0.2s ease;">
+              “I give myself permission to rest deeply without having to earn it.”
+            </p>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+            <button type="button" class="btn btn-primary" id="drawAffirmationBtn">
+              ✨ Draw Another Reflection
+            </button>
+            <a href="journal.html" class="btn btn-outline">
+              📖 Write About This in Journal
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Final Call to Action -->
+    <section class="footer-pre-cta" aria-labelledby="ctaHeading">
+      <div class="container container-narrow">
+        <h2 id="ctaHeading" style="font-size: 2.2rem; margin-bottom: 1rem;">Take a Moment for Yourself</h2>
+        <p style="font-size: 1.15rem; color: #94A3B8; max-width: 680px; margin: 0 auto;">
+          Join thousands of proactive individuals taking care of their mental well-being with clean, modern mindful clarity.
+        </p>
+        <div class="footer-pre-cta-buttons">
+          <a href="breathing-exercises.html" class="btn-cta-mint">Start 2-Min Breath</a>
+          <a href="mood-tracker.html" class="btn-cta-dark-outline">Daily Mood Check-in</a>
+          <a href="resources.html" class="btn-cta-dark-outline">Explore Guides</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <!-- Site Footer (Stackly Style) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="MindBloom Home">
+            <img src="assets/images/logo-light.png" alt="Stackly MindBloom Logo" height="38">
+          </a>
+          <p class="footer-desc">
+            Mobilizing compassionate mental wellness, evidence-informed grounding rituals, private mood tracking, and personalized peace for modern life.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.69 1.69 0 0 0 1.69-1.69c0-.93-.76-1.69-1.69-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.69 1.69 1.69m1.39 9.97v-8.37H5.07v8.37h2.78z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="X (formerly Twitter)">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About MindBloom</a></li>
+            <li><a href="resources.html">Wellness Resources</a></li>
+            <li><a href="mindfulness.html">Mindfulness Exercises</a></li>
+            <li><a href="mood-tracker.html">Mood Tracker</a></li>
+            <li><a href="wellness-goals.html">Wellness Goals</a></li>
+            <li><a href="contact.html">Contact Coordinates</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Support -->
+        <div>
+          <h4 class="footer-col-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="about.html#privacy">Terms &amp; Agreements</a></li>
+            <li><a href="about.html#privacy">Security Audits</a></li>
+            <li><a href="journal.html">Private Journal</a></li>
+            <li><a href="booking.html">Consultation Booking</a></li>
+            <li><a href="user-dashboard.html">User Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <h4 class="footer-col-title">Newsletter</h4>
+          <p class="footer-newsletter-text">
+            Get weekly mindful reflections, smart self-care reminders, and platform feature reports.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); showToast('Thank you for subscribing to our mindful newsletter!', 'success'); this.reset();">
+            <input type="email" class="footer-newsletter-input" placeholder="Your Email" required>
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stackly MindBloom. All rights reserved. Designed for mindful wellness and mental peace.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="about.html#privacy">Privacy Policy</a>
+          <a href="about.html#privacy">Terms of Service</a>
+          <a href="contact.html">Crisis Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

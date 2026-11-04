@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgElena" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EAF2EE"/>
+      <stop offset="100%" stop-color="#D7E6DF"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="32" fill="url(#bgElena)"/>
+  <circle cx="200" cy="150" r="70" fill="#E6BA9A"/>
+  <!-- Hair: Warm dark brown styled bob -->
+  <path d="M125,160 C120,70 280,70 275,160 C260,110 220,105 200,105 C160,105 135,115 125,160 Z" fill="#4A3428"/>
+  <path d="M125,150 L125,210 C125,230 145,230 145,200 L145,150 Z" fill="#4A3428"/>
+  <path d="M275,150 L275,210 C275,230 255,230 255,200 L255,150 Z" fill="#4A3428"/>
+  <!-- Friendly Face & Warm Eyes -->
+  <path d="M165,155 Q175,150 185,155" fill="none" stroke="#3D291F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M215,155 Q225,150 235,155" fill="none" stroke="#3D291F" stroke-width="3" stroke-linecap="round"/>
+  <!-- Glasses -->
+  <rect x="155" y="142" width="35" height="25" rx="8" fill="none" stroke="#688F7E" stroke-width="3"/>
+  <rect x="210" y="142" width="35" height="25" rx="8" fill="none" stroke="#688F7E" stroke-width="3"/>
+  <line x1="190" y1="154" x2="210" y2="154" stroke="#688F7E" stroke-width="3"/>
+  <!-- Gentle Smile -->
+  <path d="M185,185 Q200,198 215,185" fill="none" stroke="#9A5038" stroke-width="3" stroke-linecap="round"/>
+  <!-- Shoulders & Professional Sage Blazer -->
+  <path d="M100,380 C100,280 140,240 200,240 C260,240 300,280 300,380 Z" fill="#5E8271"/>
+  <polygon points="175,240 200,300 225,240" fill="#FAF8F5"/>
+</svg>

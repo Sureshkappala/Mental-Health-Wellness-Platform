@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+  <rect width="40" height="40" rx="10" fill="#FAF8F5"/>
+  <!-- Top Teal/Mint Curve -->
+  <path d="M14,6 C8,14 8,24 20,24 C16,21 15,15 17,10 C18,7 20,6 22,6 C19,6 16,5 14,6 Z" fill="#65C5AF"/>
+  <!-- Bottom Navy Curve -->
+  <path d="M26,34 C32,26 32,16 20,16 C24,19 25,25 23,30 C22,33 20,34 18,34 C21,34 24,35 26,34 Z" fill="#142F50"/>
+</svg>

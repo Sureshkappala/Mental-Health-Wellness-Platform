@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Sky & Atmosphere Gradient -->
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E3ECE6"/>
+      <stop offset="35%" stop-color="#EDE9E3"/>
+      <stop offset="65%" stop-color="#FCECE2"/>
+      <stop offset="100%" stop-color="#FDF6EE"/>
+    </linearGradient>
+
+    <!-- Morning Sun Glow -->
+    <radialGradient id="sunAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF5EC" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#FDE5D2" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#FCE1CD" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FCE1CD" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="sunCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#FDE3CE"/>
+      <stop offset="100%" stop-color="#F7BE9B"/>
+    </radialGradient>
+
+    <!-- Mountains & Mist Gradients -->
+    <linearGradient id="distMtn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#BDD5C8"/>
+      <stop offset="100%" stop-color="#D9E6DE"/>
+    </linearGradient>
+
+    <linearGradient id="midMtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#88AF9C"/>
+      <stop offset="100%" stop-color="#678E7C"/>
+    </linearGradient>
+
+    <linearGradient id="closeMtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#557C6B"/>
+      <stop offset="100%" stop-color="#3B5F50"/>
+    </linearGradient>
+
+    <linearGradient id="foreRidge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#365749"/>
+      <stop offset="100%" stop-color="#233E33"/>
+    </linearGradient>
+
+    <!-- Serene Lake Reflection Gradient -->
+    <linearGradient id="lake" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#CFE0D7" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#E2EDE7" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#F7EBE0" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Breathing Aura Ring Gradient -->
+    <radialGradient id="auraGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#E89A7A" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#E89A7A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky Canvas -->
+  <rect width="1200" height="800" fill="url(#sky)"/>
+
+  <!-- Warm Morning Sun & Radiance -->
+  <circle cx="780" cy="300" r="240" fill="url(#sunAura)"/>
+  <circle cx="780" cy="300" r="90" fill="url(#sunCore)"/>
+
+  <!-- Calming Sun Beams (Soft light shafts) -->
+  <polygon points="780,300 350,800 500,800" fill="#FFF9F2" opacity="0.18"/>
+  <polygon points="780,300 620,800 800,800" fill="#FFF9F2" opacity="0.18"/>
+  <polygon points="780,300 950,800 1150,800" fill="#FFF9F2" opacity="0.18"/>
+
+  <!-- Distant Whispering Mountain Peaks (Layer 1) -->
+  <path d="M-50,490 Q220,340 480,430 T960,400 Q1120,410 1250,470 L1250,800 L-50,800 Z" fill="url(#distMtn)" opacity="0.75"/>
+
+  <!-- Mid-distance Sage Ridges (Layer 2) -->
+  <path d="M-80,530 Q180,410 520,490 T1050,470 Q1180,490 1280,540 L1280,800 L-80,800 Z" fill="url(#midMtn)" opacity="0.85"/>
+
+  <!-- Calming Alpine Lake Waters -->
+  <path d="M120,620 Q560,570 1080,620 L1080,750 Q560,770 120,750 Z" fill="url(#lake)"/>
+  
+  <!-- Subtle Sunlight Ripple across Water -->
+  <ellipse cx="780" cy="650" rx="140" ry="8" fill="#FFF8F0" opacity="0.6"/>
+  <ellipse cx="770" cy="670" rx="90" ry="6" fill="#FFF8F0" opacity="0.5"/>
+  <ellipse cx="790" cy="690" rx="120" ry="7" fill="#FFF8F0" opacity="0.4"/>
+  <ellipse cx="760" cy="710" rx="70" ry="5" fill="#FFF8F0" opacity="0.3"/>
+
+  <!-- Closer Rolling Ridge (Layer 3) -->
+  <path d="M-50,610 Q280,510 650,590 T1250,580 L1250,800 L-50,800 Z" fill="url(#closeMtn)"/>
+
+  <!-- Mindful Resting Overlook (Layer 4 - Foreground Plateau) -->
+  <path d="M180,680 Q380,580 580,620 Q700,645 820,700 L820,800 L180,800 Z" fill="url(#foreRidge)"/>
+
+  <!-- Mindful Meditator in Lotus Pose on Plateau -->
+  <g transform="translate(480, 500)">
+    <!-- Aura Rings (Concentric Circles of Inner Peace) -->
+    <circle cx="80" cy="80" r="130" fill="url(#auraGlow)"/>
+    <circle cx="80" cy="80" r="105" fill="none" stroke="#FAF8F5" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.75"/>
+    <circle cx="80" cy="80" r="80" fill="none" stroke="#F7BE9B" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Meditation Base / Legs Folded -->
+    <ellipse cx="80" cy="135" rx="58" ry="16" fill="#1C3028"/>
+    <path d="M42,130 C25,128 20,110 35,102 C45,96 60,105 65,115 Z" fill="#243C32"/>
+    <path d="M118,130 C135,128 140,110 125,102 C115,96 100,105 95,115 Z" fill="#243C32"/>
+
+    <!-- Torso (Upright, Relaxed Spine) -->
+    <path d="M60,115 C58,85 68,62 80,62 C92,62 102,85 100,115 Z" fill="#1C3028"/>
+    
+    <!-- Relaxed Arms resting on knees (Gyan mudra) -->
+    <path d="M62,80 Q45,100 38,112" fill="none" stroke="#1C3028" stroke-width="9" stroke-linecap="round"/>
+    <path d="M98,80 Q115,100 122,112" fill="none" stroke="#1C3028" stroke-width="9" stroke-linecap="round"/>
+
+    <!-- Head & Serene Tilt -->
+    <circle cx="80" cy="46" r="16" fill="#1C3028"/>
+    <!-- Hair Bun / Natural Silhouette -->
+    <circle cx="80" cy="28" r="7" fill="#1C3028"/>
+  </g>
+
+  <!-- Blooming Lotus Flower Floating on Water (Symbol of Growth & Resilience) -->
+  <g transform="translate(860, 640) scale(0.9)">
+    <ellipse cx="0" cy="15" rx="45" ry="10" fill="#2A453A" opacity="0.6"/>
+    <!-- Outer Petals (Soft Lavender & Peach) -->
+    <path d="M0,5 C-40,-10 -50,-40 -20,-50 C-5,-30 0,-10 0,5 Z" fill="#E8B4A2"/>
+    <path d="M0,5 C40,-10 50,-40 20,-50 C5,-30 0,-10 0,5 Z" fill="#E8B4A2"/>
+    <path d="M-15,5 C-50,0 -60,-25 -35,-40 C-15,-25 -10,-5 -15,5 Z" fill="#D3BEDE"/>
+    <path d="M15,5 C50,0 60,-25 35,-40 C15,-25 10,-5 15,5 Z" fill="#D3BEDE"/>
+    <!-- Center Inner Petals -->
+    <path d="M0,5 C-20,-20 -25,-60 0,-70 C25,-60 20,-20 0,5 Z" fill="#FFF2EB"/>
+    <path d="M-8,5 C-25,-15 -20,-50 0,-60 C10,-45 0,-15 -8,5 Z" fill="#FCE5D6"/>
+    <circle cx="0" cy="-35" r="7" fill="#F4A261"/>
+  </g>
+
+  <!-- Lush Botanical Silhouette in Left Foreground (Sage / Eucalyptus Leaves) -->
+  <g transform="translate(40, 460)">
+    <!-- Branch 1 -->
+    <path d="M-20,340 Q60,200 40,80" fill="none" stroke="#182A22" stroke-width="5" stroke-linecap="round"/>
+    <path d="M40,80 Q20,30 50,0 Q60,40 40,80 Z" fill="#263E33"/>
+    <path d="M48,130 Q10,100 20,70 Q45,90 48,130 Z" fill="#325042"/>
+    <path d="M45,150 Q90,120 95,90 Q70,110 45,150 Z" fill="#2D483C"/>
+    <path d="M38,210 Q-5,180 5,140 Q30,170 38,210 Z" fill="#365749"/>
+    <path d="M30,240 Q90,210 85,170 Q60,200 30,240 Z" fill="#284236"/>
+    <!-- Branch 2 -->
+    <path d="M60,340 Q130,220 160,140" fill="none" stroke="#182A22" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M160,140 Q145,90 175,70 Q180,110 160,140 Z" fill="#3D5F50"/>
+    <path d="M148,180 Q100,160 110,130 Q135,150 148,180 Z" fill="#2E4A3E"/>
+    <path d="M140,210 Q190,190 200,160 Q170,180 140,210 Z" fill="#38584A"/>
+  </g>
+
+  <!-- Right Foreground Gentle Foliage -->
+  <g transform="translate(1050, 520)">
+    <path d="M120,280 Q40,160 30,70" fill="none" stroke="#182A22" stroke-width="5" stroke-linecap="round"/>
+    <path d="M30,70 Q10,20 40,0 Q50,40 30,70 Z" fill="#2B463A"/>
+    <path d="M40,120 Q-5,100 5,70 Q30,90 40,120 Z" fill="#355648"/>
+    <path d="M50,150 Q100,120 105,90 Q80,120 50,150 Z" fill="#273F34"/>
+    <path d="M65,200 Q20,180 30,150 Q55,170 65,200 Z" fill="#385B4C"/>
+  </g>
+
+  <!-- Peaceful Birds Soaring in Morning Sky -->
+  <path d="M320,220 Q335,210 350,220 Q365,210 380,220" fill="none" stroke="#678E7C" stroke-width="3.5" stroke-linecap="round" opacity="0.8"/>
+  <path d="M370,185 Q382,177 395,185 Q407,177 420,185" fill="none" stroke="#678E7C" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <path d="M420,215 Q430,208 440,215 Q450,208 460,215" fill="none" stroke="#678E7C" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Subtle Floating Sparkles of Light -->
+  <circle cx="700" cy="420" r="3" fill="#FFFBF5" opacity="0.85"/>
+  <circle cx="630" cy="460" r="2.5" fill="#FFFBF5" opacity="0.75"/>
+  <circle cx="740" cy="480" r="2" fill="#FFFBF5" opacity="0.7"/>
+  <circle cx="820" cy="450" r="3.5" fill="#FFFBF5" opacity="0.9"/>
+  <circle cx="580" cy="500" r="2" fill="#FFFBF5" opacity="0.6"/>
+</svg>
