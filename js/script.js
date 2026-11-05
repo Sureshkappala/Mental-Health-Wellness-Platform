@@ -1594,8 +1594,19 @@
         const email = document.getElementById('loginEmailInput').value.trim();
         const role = document.getElementById('loginRoleSelect') ? document.getElementById('loginRoleSelect').value : 'User';
 
+        let displayName = role === 'Admin' ? 'Admin Coordinator' : 'Alex Rivera';
+        if (email) {
+          const rawName = email.split('@')[0];
+          displayName = rawName
+            .replace(/[._-]/g, ' ')
+            .split(' ')
+            .filter(Boolean)
+            .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+            .join(' ') || email;
+        }
+
         state.currentUser = {
-          name: role === 'Admin' ? 'Admin Coordinator' : 'Alex Rivera',
+          name: displayName,
           email: email || 'demo@mindbloom.test',
           role: role
         };
@@ -1653,6 +1664,31 @@
      12. Dashboards (User & Admin) Dynamic Binding
      ========================================================================== */
   function initDashboards() {
+    // Sync current logged-in user credentials to Dashboard UI
+    const storedUser = getStorage('mb_current_user', state.currentUser);
+    if (storedUser) {
+      state.currentUser = storedUser;
+    }
+    const currentName = state.currentUser ? (state.currentUser.name || state.currentUser.email) : 'Alex Rivera';
+
+    // Update welcome heading with login credentials
+    const welcomeHeadings = document.querySelectorAll('#userWelcomeHeading, .dashboard-welcome-heading');
+    welcomeHeadings.forEach(h => {
+      h.textContent = `Welcome, ${currentName}`;
+    });
+
+    // Update user badge in dashboard headers
+    const userBadges = document.querySelectorAll('.dashboard-user-badge span:last-child, .user-display-name');
+    userBadges.forEach(badge => {
+      badge.textContent = currentName;
+    });
+
+    // Update default booking name input if on booking page
+    const bookingNameInput = document.getElementById('bookingNameInput');
+    if (bookingNameInput && state.currentUser && state.currentUser.name) {
+      bookingNameInput.value = state.currentUser.name;
+    }
+
     // 1. User Dashboard
     const userAptList = document.getElementById('userAppointmentsList');
     const userSavedList = document.getElementById('userSavedResourcesList');
